@@ -1,3 +1,4 @@
+import { Trophy } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./Awards.css";
 
@@ -39,6 +40,9 @@ const Awards: React.FC = () => {
                 <div ref={gridRef} className="awards__grid scroll-reveal-stagger">
                     {awards.map((award, index) => (
                         <div key={index} className="award-card">
+                            <div className="award-card__icon" aria-hidden="true">
+                                <Trophy />
+                            </div>
                             <div className="award-card__year">{award.year}</div>
                             <div className="award-card__content">
                                 <h3 className="award-card__title">{award.title}</h3>

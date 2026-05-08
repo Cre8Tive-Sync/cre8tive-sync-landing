@@ -49,17 +49,21 @@
   overflow: hidden;
 }
 
-.award-card::after {
-  content: '🏆';
+.award-card__icon {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 2rem;
   opacity: 0.1;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-.award-card:hover::after {
+.award-card__icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.award-card:hover .award-card__icon {
   opacity: 0.3;
   transform: scale(1.2);
 }
