@@ -1,0 +1,424 @@
+.project-detail {
+  --accent: #ffffff;
+  color: white;
+  padding: 9rem 2rem 6rem;
+  min-height: 100vh;
+}
+
+.project-detail__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---- Back link ---- */
+.project-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.project-detail__back:hover {
+  color: white;
+  transform: translateX(-4px);
+}
+
+/* ---- Hero ---- */
+.project-detail__hero {
+  margin-bottom: 2.5rem;
+}
+
+.project-detail__category {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid color-mix(in srgb, var(--accent) 50%, rgba(255, 255, 255, 0.2));
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-detail__title {
+  font-family: "PrimorStylish", sans-serif;
+  font-weight: 200;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7), 0 0 60px rgba(0, 0, 0, 0.5);
+}
+
+.project-detail__lead {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.03rem;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 720px;
+}
+
+.project-detail__visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.04rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.65rem 1.6rem;
+  border-radius: 35px;
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid white;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.project-detail__visit:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 6px 14px;
+}
+
+/* ---- Accent banner (hero image stand-in) ---- */
+.project-detail__banner {
+  position: relative;
+  height: 340px;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(100% 120% at 0% 0%, color-mix(in srgb, var(--accent) 60%, transparent), transparent 55%),
+    radial-gradient(90% 130% at 100% 100%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 60%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(8px);
+}
+
+.project-detail__banner-name {
+  font-family: "PrimorStylish", sans-serif;
+  font-weight: 200;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* ---- Overview / meta ---- */
+.project-detail__overview {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem 2rem;
+}
+
+.project-meta__item dt {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.4rem;
+}
+
+.project-meta__item dd {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.project-tech__heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.project-tech__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-tech__tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.82rem;
+  letter-spacing: 0.03rem;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+}
+
+/* ---- Section headings ---- */
+.project-section__heading {
+  font-family: "PrimorStylish", sans-serif;
+  font-weight: 200;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- Challenge & Solution ---- */
+.project-detail__story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.project-story__heading {
+  font-family: "PrimorStylish", sans-serif;
+  font-weight: 200;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.project-story__heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.project-story__body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  letter-spacing: 0.02rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ---- Results ---- */
+.project-detail__results {
+  margin-bottom: 5rem;
+}
+
+.project-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-stat {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-stat:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent) 45%, rgba(255, 255, 255, 0.2));
+}
+
+.project-stat__value {
+  display: block;
+  font-family: "PrimorStylish", sans-serif;
+  font-weight: 200;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  color: #fff;
+  text-shadow: 0 0 30px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.project-stat__label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.04rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---- Highlights ---- */
+.project-detail__highlights {
+  margin-bottom: 5rem;
+}
+
+.project-highlights {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.project-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-highlight__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* ---- Next project ---- */
+.project-next {
+  --accent: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  background:
+    radial-gradient(120% 200% at 100% 50%, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.project-next:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 45%, rgba(255, 255, 255, 0.2));
+}
+
+.project-next__label {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 0.5rem;
+}
+
+.project-next__name {
+  display: block;
+  font-family: "PrimorStylish", sans-serif;
+  font-weight: 200;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.project-next__arrow {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.project-next:hover .project-next__arrow {
+  transform: translateX(8px);
+}
+
+.project-detail--missing {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.project-detail--missing .project-detail__back {
+  margin: 2rem auto 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .project-detail {
+    padding: 7.5rem 1rem 4rem;
+  }
+
+  .project-detail__title {
+    font-size: 3rem;
+  }
+
+  .project-detail__lead {
+    font-size: 1.1rem;
+  }
+
+  .project-detail__banner {
+    height: 220px;
+    margin-bottom: 3rem;
+  }
+
+  .project-detail__banner-name {
+    font-size: 3rem;
+  }
+
+  .project-detail__overview,
+  .project-detail__story,
+  .project-highlights {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .project-section__heading {
+    font-size: 2rem;
+  }
+
+  .project-next__name {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail__title {
+    font-size: 2.4rem;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}

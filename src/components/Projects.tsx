@@ -1,46 +1,8 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { PROJECTS } from "../data/projects";
 import "./Projects.css";
-
-// Edit project details here — descriptions, tags and links are placeholders.
-const PROJECTS = [
-    {
-        name: "Oxilia",
-        tagline: "Add a short description of the Oxilia project.",
-        tags: ["Web", "Design"],
-        link: "#"
-    },
-    {
-        name: "AiCore",
-        tagline: "Add a short description of the AiCore project.",
-        tags: ["AI", "Platform"],
-        link: "#"
-    },
-    {
-        name: "Kwento Kard",
-        tagline: "Add a short description of the Kwento Kard project.",
-        tags: ["Mobile", "Product"],
-        link: "#"
-    },
-    {
-        name: "WebMocap",
-        tagline: "Add a short description of the WebMocap project.",
-        tags: ["Web", "Motion"],
-        link: "#"
-    },
-    {
-        name: "Systemize Solutions",
-        tagline: "Add a short description of the Systemize Solutions project.",
-        tags: ["Automation", "Software"],
-        link: "#"
-    },
-    {
-        name: "GGT",
-        tagline: "Add a short description of the GGT project.",
-        tags: ["Branding", "Web"],
-        link: "#"
-    }
-];
 
 const Projects: React.FC = () => {
     const headerRef = useScrollReveal<HTMLDivElement>();
@@ -58,12 +20,11 @@ const Projects: React.FC = () => {
 
                 <div ref={gridRef} className="projects__grid scroll-reveal-stagger">
                     {PROJECTS.map((project, index) => (
-                        <a
-                            key={project.name}
-                            href={project.link}
+                        <Link
+                            key={project.slug}
+                            to={`/portfolio/${project.slug}`}
                             className="project-card"
-                            target={project.link.startsWith("http") ? "_blank" : undefined}
-                            rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                            style={{ ["--accent" as string]: project.accent }}
                         >
                             <div className="project-card__arrow" aria-hidden="true">
                                 <ArrowUpRight />
@@ -80,8 +41,14 @@ const Projects: React.FC = () => {
                                     </span>
                                 ))}
                             </div>
-                        </a>
+                        </Link>
                     ))}
+                </div>
+
+                <div className="projects__cta">
+                    <Link to="/portfolio" className="projects__cta-btn">
+                        View Full Portfolio <ArrowRight size={18} />
+                    </Link>
                 </div>
             </div>
         </section>
