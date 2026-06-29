@@ -2,6 +2,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.tsx";
 import { ServiceQuote } from "./components/ServiceQuote";
+import { ProjectPlanning } from "./components/ProjectPlanning";
+import "./index.css";
 import "./App.css";
 import { createRoot as reactCreateRoot } from "react-dom/client";
 
@@ -10,6 +12,7 @@ createRoot(document.getElementById("root")!).render(
 		<Routes>
 			<Route path="/" element={<App />} />
 			<Route path="/service-quota" element={<ServiceQuote />} />
+			<Route path="/project-planning" element={<ProjectPlanning />} />
 		</Routes>
 	</BrowserRouter>
 );
