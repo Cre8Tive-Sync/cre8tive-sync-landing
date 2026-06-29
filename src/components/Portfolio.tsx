@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Header from "./Header";
 import Footer from "./Footer";
-import BlackholeBackground from "./BlackholeBackground";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { PROJECTS, PROJECT_CATEGORIES } from "../data/projects";
 import "./Portfolio.css";
@@ -23,7 +22,6 @@ const Portfolio: React.FC = () => {
 
   return (
     <>
-      <BlackholeBackground started />
       <Header instant />
 
       <main className="portfolio-page">

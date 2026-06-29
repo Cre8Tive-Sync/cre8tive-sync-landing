@@ -3,8 +3,10 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import App from "./App.tsx";
 import { ServiceQuote } from "./components/ServiceQuote";
+import { ProjectPlanning } from "./components/ProjectPlanning";
 import Portfolio from "./components/Portfolio";
 import ProjectDetail from "./components/ProjectDetail";
+import "./index.css";
 import "./App.css";
 
 // On every route change scroll to the top — or, when navigating to a hash
@@ -34,6 +36,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/portfolio/:slug" element={<ProjectDetail />} />
       <Route path="/service-quota" element={<ServiceQuote />} />
+      <Route path="/project-planning" element={<ProjectPlanning />} />
     </Routes>
   </BrowserRouter>
 );

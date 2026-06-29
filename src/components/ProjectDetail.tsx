@@ -2,14 +2,12 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import Header from "./Header";
 import Footer from "./Footer";
-import BlackholeBackground from "./BlackholeBackground";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { getProject, getNextProject } from "../data/projects";
 import "./ProjectDetail.css";
 
 const NotFound: React.FC = () => (
   <>
-    <BlackholeBackground started />
     <Header instant />
     <main className="project-detail project-detail--missing">
       <div className="project-detail__container">
@@ -42,7 +40,6 @@ const ProjectDetail: React.FC = () => {
 
   return (
     <>
-      <BlackholeBackground started />
       <Header instant />
 
       <main className="project-detail" style={accentStyle}>
