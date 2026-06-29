@@ -1,0 +1,21 @@
+/* Tailwind entry stylesheet.
+   NOTE: @tailwind base (Preflight) is intentionally omitted so the existing
+   plain-CSS landing page is not reset. The utility + component layers below
+   power the glass tool pages (Service Quote, Project Planning). */
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Required by tailwind.config.ts borderRadius (rounded-lg/md/sm -> var(--radius)) */
+  --radius: 0.5rem;
+
+  /* shadcn design tokens referenced via hsl(var(--token)) in the config. */
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --border: 0 0% 100% / 0.2;
+  --input: 0 0% 100% / 0.2;
+  --ring: 0 0% 100%;
+  --glass-bg: 0 0% 100% / 0.06;
+  --glass-border: 0 0% 100% / 0.3;
+  --glass-highlight: 0 0% 100% / 0.1;
+}
