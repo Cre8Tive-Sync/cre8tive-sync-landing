@@ -6,6 +6,7 @@ import { ServiceQuote } from "./components/ServiceQuote";
 import { ProjectPlanning } from "./components/ProjectPlanning";
 import Portfolio from "./components/Portfolio";
 import ProjectDetail from "./components/ProjectDetail";
+import About from "./components/About";
 import "./index.css";
 import "./App.css";
 
@@ -33,6 +34,7 @@ createRoot(document.getElementById("root")!).render(
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="/about" element={<About />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/portfolio/:slug" element={<ProjectDetail />} />
       <Route path="/service-quota" element={<ServiceQuote />} />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import "./Footer.css";
 
@@ -36,9 +37,9 @@ const Footer: React.FC = () => {
                         <div className="footer__column">
                             <h3>Company</h3>
                             <ul>
-                                <li><a href="#values">About Us</a></li>
-                                <li><a href="#values">Our Values</a></li>
-                                <li><a href="#projects">Portfolio</a></li>
+                                <li><Link to="/about">About Us</Link></li>
+                                <li><Link to="/about#values">Our Values</Link></li>
+                                <li><Link to="/portfolio">Portfolio</Link></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>

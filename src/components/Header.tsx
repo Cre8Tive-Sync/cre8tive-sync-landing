@@ -46,6 +46,7 @@ const Header: React.FC<Props> = ({ loaded = true, instant = false }) => {
         </Link>
 
         <ul className="nav-links">
+          <li><Link to="/about">About</Link></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
           <li><a href={sectionHref("values")} onClick={() => goToSection("values")}>Values</a></li>
           <li><a href={sectionHref("contact")} onClick={() => goToSection("contact")}>Contact</a></li>
@@ -70,6 +71,7 @@ const Header: React.FC<Props> = ({ loaded = true, instant = false }) => {
       {menuOpen && (
         <div className="mobile-nav">
           <ul>
+            <li><Link to="/about" onClick={closeMenu}>About</Link></li>
             <li><Link to="/portfolio" onClick={closeMenu}>Portfolio</Link></li>
             <li><a href={sectionHref("values")} onClick={() => goToSection("values")}>Values</a></li>
             <li><a href={sectionHref("contact")} onClick={() => goToSection("contact")}>Contact</a></li>
