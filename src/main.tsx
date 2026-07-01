@@ -6,6 +6,7 @@ import { ServiceQuote } from "./components/ServiceQuote";
 import { ProjectPlanning } from "./components/ProjectPlanning";
 import Portfolio from "./components/Portfolio";
 import ProjectDetail from "./components/ProjectDetail";
+import Designs from "./components/Designs";
 import "./index.css";
 import "./App.css";
 
@@ -35,6 +36,8 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/" element={<App />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/portfolio/:slug" element={<ProjectDetail />} />
+      <Route path="/Designs" element={<Designs />} />
+      <Route path="/designs" element={<Designs />} />
       <Route path="/service-quota" element={<ServiceQuote />} />
       <Route path="/project-planning" element={<ProjectPlanning />} />
     </Routes>
